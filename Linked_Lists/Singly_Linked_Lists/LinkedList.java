@@ -26,13 +26,8 @@ public class LinkedList {
 					.println("Invalid previous node data. Skipping the process..");
 		} else {
 			Node newNode = new Node(data);
-			if (prevNode.next == null) {
-				prevNode.next = newNode;
-				newNode.next = null;
-			} else {
-				newNode.next = prevNode.next;
-				prevNode.next = newNode;
-			}
+			newNode.next = prevNode.next;
+			prevNode.next = newNode;
 		}
 	}
 
